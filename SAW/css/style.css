@@ -1,0 +1,365 @@
+/* Adds a scroll bar*/
+html {
+    height: 100%;
+}
+
+body {
+    /*background-image: url("../img/b7.gif");*/
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    overflow-y: scroll;
+    font-family: "Press Start 2P", sans-serif;
+    /*align-items: center;*/
+}
+
+.wrapper {
+    height: 30px;
+    width: -900px;
+    background-color: #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.6;
+}
+
+.page-layout {
+    height: 100%;
+    display: flex;
+    /*flips content into a column*/
+    flex-direction: column;
+    align-items: flex-end; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.Home {
+    background-image: url("../img/b7.gif");
+}
+
+.About {
+    background-image: url("../img/b6.gif");
+}
+
+.Activities {
+    background-image: url("../img/b9.gif");
+}
+
+.Memories {
+    background-image: url("../img/b8.jpg");
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+/* Displays the header contents in a single row and without bullet points (essentially not as a list) */
+.main-menu ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 0px;
+    margin-right: 5px;
+    /*float: right;*/
+}
+
+
+header a {
+    display: flex;
+    color: #000;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 5px 5px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+div {
+    margin: 5px;
+}
+
+/* adding the properties for the gallery, use of video linked in sources folder*/
+
+.gallery {
+    width: 75%;
+    margin : 100px auto 50px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: repeat(3, minmax(400px, 1fr));
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+
+/*.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    margin:auto;
+    justify-content: space-between;
+}*/
+
+/* styling of the images happen here*/
+/*.gallery-item{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color:#333;
+    padding: 5px;
+    box-sizing: border-box;
+}*/
+
+/*.gallery-item:hover {
+    background-color: #333;
+    color: #fff;
+}*/
+
+.gallery img {
+    width: 270px;
+    height: 300px;
+    cursor: pointer;
+}
+
+/*adds a hover effect*/
+.gallery img:hover {
+    border-radius: 50px;
+    box-shadow: 0 32px 75px rgba(0, 0, 0, 0.3);
+}
+
+.full {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 100;
+}
+
+span:hover {
+    display: contents;
+    color: red;
+}
+
+
+/*
+// Propeties to style the carousel and its buttons 
+.carousel {
+    width: 500px;
+    height: 500px;
+    // Creates a window to only show the image we've cycled to 
+    overflow: hidden;
+    // centres the carousel in the middle of the page 
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
+    // Helps position the buttons 
+    position: relative; 
+}
+*/
+
+.imgs {
+    /* Aids in rendering the images when using the buttons */
+    position: absolute;
+    /* Places images behind the caption */
+    z-index: 1;
+    /* anchors carousel to the left */
+    left: 0;
+    width: 500px;
+    height: 500px;
+    /* built in animation for when images slide left */
+    transition: left .5s ease-in-out;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* makes sure images are loaded with the same width and height each time */
+.imgs img {
+    width: 500px;
+    height: 500px;
+}
+
+/*
+
+// set up for the buttons 
+.carousel nav {
+    position: absolute;
+    display: flex;
+    // equal amount of space between our buttons 
+    justify-content: space-between;
+    z-index: 2;
+    width: 500px;
+    height: 450px; 
+    // centres the buttons in the border 
+    line-height: 200px;
+}
+
+.carousel nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 0px 25px;
+    // allows us to hover over the buttons as a transition 
+    transition: all .25s ease;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+// To see the buttons again when we hover over them 
+.carousel nav a:hover{
+    transition: all .25s ease;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.caption {
+    // sets position at the bottom 
+    position: absolute;
+    bottom: 0;
+    // appears above nav images 
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.25);
+    height: 50px;
+    line-height: 50px;
+    margin: 0px;
+}
+
+*/
+
+/*.row {
+    justify-content: center;
+}
+  
+figure {
+    margin: 15px;
+}*/
+
+h1,h2,h3,p {
+    display: flex;
+    color: #000;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 15px 15px;
+}
+
+.box {
+    height: 750px;
+    width: 1240px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.6;
+
+}
+
+.box2 {
+    height: 350px;
+    width: 1240px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.6;
+
+}
+
+
+.box3 {
+    height: 40px;
+    width: 1240px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.6;   
+}
+
+.box4 {
+    height: 600px;
+    width: 1240px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.6;
+}
+
+.box5 {
+    height: 1400px;
+    width: 1240px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.6;
+}
+
+.box6 {
+    height: 450px;
+    width: 1240px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.6;
+}
+
+.box7 h2 {
+    justify-content: center;
+    height: 25px;
+    width: 1210px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.6;
+}
+
+
+footer,h4 {
+    color: #fff;
+}
+
+/*music feature*/
+
+
+/*.main-menu li {
+    margin-right: 5px;
+}*/
+
+/*.main-menu li:last-child {
+    margin-right: 10px;
+}*/
+
+/*header h1,a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    padding: 15px 15px;
+    font-family: "Press Start 2P", sans-serif;
+}*/
+
+/*@media(max-width: 600px) {
+    :gallery {
+        width: 100%;
+    }
+    .gallery-item {
+        width: 50%;
+    }
+}
+
+@media(max-width: 500px) {
+    .gallery-item{
+        width: 100%;
+    }
+}*/
